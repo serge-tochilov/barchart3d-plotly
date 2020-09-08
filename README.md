@@ -7,15 +7,27 @@ Currently the Plotly package doesn't have a 3D barcharts plotting function. Ther
 *def barchart3d(labels, z_data, title, z_title,
                n_row=0, width=900, height=900, thikness=0.7, colorscale='Viridis',
                \*\*kwargs):*
-    Draws a 3D barchart
-    **labels:** Array_like of bar labels
-    **z_data:** Array_like of bar heights (data coords)
-    **title:** Chart title
-    **z_title:** Z-axis title
-    **n_row:** Number of x-rows
-    **idth:** Chart width (px)
-    **height:** Chart height (px)
-    **thikness:** Bar thikness (0; 1)
-    **colorscale:** Barchart colorscale
-    **\*\*kwargs:** Passed to Mesh3d()
-    Returns: 3D barchart figure
+               
+ Draws a 3D barchart
+    
+ **labels:** Array_like of bar labels
+    
+ **z_data:** Array_like of bar heights (data coords)
+    
+ **title:** Chart title
+    
+ **z_title:** Z-axis title
+ 
+ **n_row:** Number of x-rows
+ 
+ **width:** Chart width (px)
+ 
+ **height:** Chart height (px)
+ 
+ **thikness:** Bar thikness (0; 1)
+ 
+ **colorscale:** Barchart colorscale
+ 
+ **\*\*kwargs:** Passed to Mesh3d()
+ 
+ Returns: 3D barchart figure
