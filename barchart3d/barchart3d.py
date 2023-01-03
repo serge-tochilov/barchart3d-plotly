@@ -15,7 +15,7 @@ def barchart3d(
     n_row: int = 0,
     width: int = 900,
     height: int = 900,
-    thikness: float = 0.7,
+    thickness: float = 0.7,
     colorscale: str = "Viridis",
     **kwargs,
 ):
@@ -28,7 +28,7 @@ def barchart3d(
     :param n_row: Number of x-rows
     :param width: Chart width (px)
     :param height: Chart height (px)
-    :param thikness: Bar thikness (0; 1)
+    :param thickness: Bar thickness (0; 1)
     :param colorscale: Barchart colorscale
     :param **kwargs: Passed to Mesh3d()
     :return: 3D barchart figure
@@ -36,15 +36,15 @@ def barchart3d(
 
     if n_row < 1:
         n_row = math.ceil(math.sqrt(len(z_data)))
-    thikness *= 0.5
+    thickness *= 0.5
     ann = []
 
     fig = go.Figure()
 
     for iz, z_max in enumerate(z_data):
         x_cnt, y_cnt = iz % n_row, iz // n_row
-        x_min, y_min = x_cnt - thikness, y_cnt - thikness
-        x_max, y_max = x_cnt + thikness, y_cnt + thikness
+        x_min, y_min = x_cnt - thickness, y_cnt - thickness
+        x_max, y_max = x_cnt + thickness, y_cnt + thickness
 
         fig.add_trace(
             go.Mesh3d(
